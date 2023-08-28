@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\code\\personal\\Resume2023\\Resume2023.csproj": {}
+    "D:\\code\\personal\\Resume2023\\Resume2023.csproj": {}
   },
   "projects": {
-    "d:\\code\\personal\\Resume2023\\Resume2023.csproj": {
+    "D:\\code\\personal\\Resume2023\\Resume2023.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\code\\personal\\Resume2023\\Resume2023.csproj",
+        "projectUniqueName": "D:\\code\\personal\\Resume2023\\Resume2023.csproj",
         "projectName": "Resume2023",
-        "projectPath": "d:\\code\\personal\\Resume2023\\Resume2023.csproj",
+        "projectPath": "D:\\code\\personal\\Resume2023\\Resume2023.csproj",
         "packagesPath": "D:\\packages\\nuget",
-        "outputPath": "d:\\code\\personal\\Resume2023\\obj\\",
+        "outputPath": "D:\\code\\personal\\Resume2023\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\drosskopf\\AppData\\Roaming\\NuGet\\NuGet.Config",
