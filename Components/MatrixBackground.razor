@@ -1,0 +1,18 @@
+@page "/matrix-background-interop"
+@inject IJSRuntime JSRuntime
+
+<div class="matrix-container">
+</div>
+
+@code {
+    private int Rows = 50;
+    private int Columns = 20;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("matrixInterop.startAnimation");
+        }
+    }
+}

@@ -1,9 +1,44 @@
 ﻿@page "/"
+@inject IJSRuntime JSRuntime
 
-<PageTitle>Index</PageTitle>
-
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
+<div class="matrix-container">
+    @for (int i = 0; i < 2; i++)
+    {
+        <div class="matrix-column">
+            <div class="matrix-character">@((char)Random.Next(33, 127))</div>
+        </div>
+    }
+    @for (int i = 0; i < 2; i++)
+    {
+        <div class="matrix-column">
+            <div class="matrix-character">@((char)Random.Next(33, 127))</div>
+        </div>
+    }
+    @for (int i = 0; i < 2; i++)
+    {
+        <div class="matrix-column">
+            <div class="matrix-character">@((char)Random.Next(33, 127))</div>
+        </div>
+    }
+    @for (int i = 0; i < 2; i++)
+    {
+        <div class="matrix-column">
+            <div class="matrix-character">@((char)Random.Next(33, 127))</div>
+        </div>
+    }
+    @for (int i = 0; i < 2; i++)
+    {
+        <div class="matrix-column">
+            <div class="matrix-character">@((char)Random.Next(33, 127))</div>
+        </div>
+    }
+    @for (int i = 0; i < 2; i++)
+    {
+        <div class="matrix-column">
+            <div class="matrix-character">@((char)Random.Next(33, 127))</div>
+        </div>
+    }
+</div>
+@code {
+    private Random Random = new Random();
+}
