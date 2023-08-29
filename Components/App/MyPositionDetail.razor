@@ -1,0 +1,37 @@
+@using Resume2023.Data
+@using Resume2023.Models
+@using Resume2023.Components.Dumb
+<Panel show=@show>
+@* <div class="overlay">
+    <div class="panel"> *@
+        <div class="header">
+            <h1>@position.Name</h1>
+        </div>
+        <div class="section">
+            <div class="label">
+                <h3>Detail</h3>
+            </div>
+            <div class="details">
+                @(position.Description ?? "No Description")
+            </div>
+        </div>
+        <div class="experiences section">
+            <h3>Experiences</h3>
+            @foreach (var experience in Experiences.GetByPosition(position.Id))
+            {
+                <MyExperience experience=@experience></MyExperience>
+            }
+        </div>
+    @* </div>
+</div> *@
+
+</Panel>
+
+
+@code {
+    [Parameter]
+    public Position position { get; set; } = new Position();
+
+    [Parameter]
+    public bool show { get; set; } = false;
+}

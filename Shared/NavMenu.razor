@@ -1,27 +1,43 @@
 ﻿<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">Resume2023</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
 </div>
-
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+<div class="background">
+    <div class="rotate">David Rosskopf</div>
+</div>
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <nav class="flex-column">
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
+                <span class="oi oi-home" aria-hidden="true"></span> About Me
             </NavLink>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
+            <NavLink class="nav-link" href="myskills">
+                <span class="oi oi-puzzle-piece" aria-hidden="true"></span> My Skills
             </NavLink>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+            <NavLink class="nav-link" href="mypositions">
+                <span class="oi oi-fork" aria-hidden="true"></span> My Positions
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="myreferences">
+                <span class="oi oi-people" aria-hidden="true"></span> My References
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="https://github.com/drosskopfchurch/Resume">
+                <span class="oi oi-arrow-circle-bottom" aria-hidden="true"></span> This App
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="https://www.linkedin.com/in/david-rosskopf-9176721b/">
+                <span class="oi oi-link-intact" aria-hidden="true"></span> My LinkedIn
             </NavLink>
         </div>
     </nav>

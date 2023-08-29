@@ -1,0 +1,31 @@
+@using Resume2023.Models
+<button class="skill" @onclick="@OnClick">
+    <MySkillProficiency proficiency=@skill.Proficiency></MySkillProficiency>
+    <div class="name">
+        <h3>
+            @skill.Name
+        </h3>
+    </div>
+
+    @if (skill.Skills.Count() > 0)
+    {
+        <div class="right arrow">
+        </div>
+    }
+    else
+    {
+        <div class="spacer">
+        </div>
+    }
+
+
+</button>
+
+
+@code {
+    [Parameter]
+    public Skill skill { get; set; } = new Skill();
+    
+    [Parameter]
+    public EventCallback OnClick { get; set; }
+}

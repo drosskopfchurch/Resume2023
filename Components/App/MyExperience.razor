@@ -1,0 +1,51 @@
+@using Resume2023.Models
+
+<div class="tile">
+    @if(show)
+    {
+        <button @onclick="@(e => toggleShow())">
+            <h5>
+                [-] @experience.Name
+            </h5>
+        </button>
+        <div class="body">
+            <div class="details">
+                <div class="label">
+                    Details
+                </div>
+                <div class="value">
+                    @experience.Description
+                </div>
+            </div>
+            <div class="position">
+                <div class="label">
+                    Position
+                </div>
+                <div class="value">
+                    @($"{experience.Position.Name} ({experience.Position.StartDate.Year} - ")
+                    @if (experience.Position.EndDate != null)
+                    {
+                        @experience.Position.EndDate.Value.Year
+                    }
+                    )
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <button @onclick="@(e => toggleShow())">
+            <h5>
+                [+] @experience.Name
+            </h5>
+        </button>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public Experience experience { get; set; } = new Experience();
+    private bool show { get; set; } = false;
+
+    private void toggleShow() => show = !show;
+}

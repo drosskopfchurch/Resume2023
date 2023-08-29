@@ -1,0 +1,13 @@
+@page "/myreferences"
+@using Resume2023.Models
+@using Resume2023.Data
+@using Resume2023.Components.App
+
+<PageTitle>My References</PageTitle>
+<h2>My References</h2>
+<div class="grid">
+    @foreach (var reference in References.All())
+    {
+        <MyReference reference=@reference></MyReference>
+    }
+</div>

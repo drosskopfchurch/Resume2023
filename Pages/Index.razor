@@ -1,44 +1,74 @@
 ﻿@page "/"
-@inject IJSRuntime JSRuntime
 
-<div class="matrix-container">
-    @for (int i = 0; i < 2; i++)
-    {
-        <div class="matrix-column">
-            <div class="matrix-character">@((char)Random.Next(33, 127))</div>
+<PageTitle>About Me</PageTitle>
+
+<h1>David Rosskopf</h1>
+<div class="summary">
+    <img src="/images/Headshot.png" alt="Picture of David Rosskopf">
+    <div>
+        <div class="description">
+            <p>
+                I have two passions solving and solutioning. There is a great satisfaction that comes with putting together a puzzle, likewise I get a high when I solve problems, and software development is full of them. I also find great satisfaction that comes from creating something, that someone else needs, loves, or benefits from. 
+            </p>
+            <p>
+                I am results driven.  If you know what results you want, I will do nearly impossible things to get you that result.  Like a dog with a bone, I hyper focus on what needs to happen to acheive the desired result. I evaluate, calculate, predict, and adjust constantly to try to meet the result. 
+            </p>
+            <p>
+                I have learned through experience that the team I work with is vital to acheiving any desired result.  I connect with team members, I learn what drives them, what they love, what they hate.  I learn their weaknesses and strengths.  I then work to develop each team member, strengthening their core talents, helping them overcome their weeknesses. 
+            </p>
+            <p>
+                I am a jovial man, I seek to make work enjoyable and fun for everyone I work with.  
+            </p>
         </div>
-    }
-    @for (int i = 0; i < 2; i++)
-    {
-        <div class="matrix-column">
-            <div class="matrix-character">@((char)Random.Next(33, 127))</div>
-        </div>
-    }
-    @for (int i = 0; i < 2; i++)
-    {
-        <div class="matrix-column">
-            <div class="matrix-character">@((char)Random.Next(33, 127))</div>
-        </div>
-    }
-    @for (int i = 0; i < 2; i++)
-    {
-        <div class="matrix-column">
-            <div class="matrix-character">@((char)Random.Next(33, 127))</div>
-        </div>
-    }
-    @for (int i = 0; i < 2; i++)
-    {
-        <div class="matrix-column">
-            <div class="matrix-character">@((char)Random.Next(33, 127))</div>
-        </div>
-    }
-    @for (int i = 0; i < 2; i++)
-    {
-        <div class="matrix-column">
-            <div class="matrix-character">@((char)Random.Next(33, 127))</div>
-        </div>
-    }
+    </div>
 </div>
-@code {
-    private Random Random = new Random();
-}
+<div class="eval">
+    <div class="SuperPowers">
+        <div class="title">My Super Powers</div>
+        <div>We all have something special about us, something that most don't have. Here is what I have discovered
+            about myself:</div>
+        <div class="power">
+            <div class="name">Solutioning</div>
+            <div class="description">I am great, at developing awesome, simple, and ingenious solutions. I have detailed
+                an unique process I go through to
+                connect myself with the problems, which allows me to come up with the right solutions.
+            </div>
+        </div>
+        <div class="power">
+            <div class="name">Mentoring</div>
+            <div class="description">I am really good at taking very inexperienced engineers, and helping them to become
+                full functioning engineers, in a short
+                amount of time.
+            </div>
+        </div>
+        <div class="power">
+            <div class="name">Managing Relationships</div>
+            <div class="description">I am really good at helping people feel included, and heard. I have worked with a variety of clientel, and personalities. 
+            </div>
+        </div>
+        <div class="power">
+            <div class="name">Figuring out difficult problems</div>
+            <div class="description">My team would liken me to the voltron defender. They would hit their heads on some
+                of the hardest issues, but I would come in, and in a short
+                amount of time, would identify, and solve the issue.
+            </div>
+        </div>
+    </div>
+    <div class="Kryptonytes">
+        <div class="title">My Kryptonytes</div>
+        <div>As with super powers, comes those few things we are weak at. Here are mine.</div>
+        <div class="Kryptonyte">
+            <div class="name">Organization</div>
+            <div class="description">I am pretty used to a very adaptive/agile environment. Features, and priorities are
+                fairly fluid, depending on the current need.
+                I am good at prioritizing the work, but not as good as tasking out, and keeping the sprint safe from
+                changes in priority.
+            </div>
+        </div>
+        <div class="Kryptonyte">
+            <div class="name">Too Forward Thinking</div>
+            <div class="description">At times I have been so progressive in my thinking, that I have forgotten to get buy off from stakeholders.  I am not wrong in the decisions I made, just forgot to clue in management.  Typically in high stress, limited time situations.  
+            </div>
+        </div>
+    </div>
+</div>

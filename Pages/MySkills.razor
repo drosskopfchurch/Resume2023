@@ -1,0 +1,54 @@
+﻿@page "/myskills"
+@using Resume2023.Models
+@using Resume2023.Data
+@using Resume2023.Components
+@using Resume2023.Components.App
+
+<PageTitle>My Skills</PageTitle>
+
+<h1>My Skills</h1>
+<p>Below are some honest self evaluations of my skills. I am always learning and growing my knowledge base. Below you can expand each skill to get a granular breakdown. You can also click to open a skill, to get more details.</p>
+
+<MySkillDetail skill=@currentSkill show=@showSkill></MySkillDetail>
+@foreach (var skill in @skills)
+{
+    <MySkill skill=@skill OnClick=@(e => openSkill(skill))></MySkill>
+    @if (@skill.ShowSkills == true)
+    {
+        if (@skill.Skills.Count() > 0)
+        {
+            <button class="indent expand" @onclick="@(e => toggleSkills(@skill))">
+                [-] hide breakdown
+            </button>
+        }
+        <div class="indent">
+            @foreach (var breakdownSkill in skill.Skills)
+            {
+                <MySkill skill=@breakdownSkill OnClick=@(e => openSkill(breakdownSkill))></MySkill>
+            }
+        </div>
+    }
+    else
+    {
+        if (@skill.Skills.Count() > 0)
+        {
+            <button class="indent expand" @onclick="@(e => toggleSkills(@skill))">
+                [+] show breakdown
+            </button>
+        }
+    }
+}
+
+@code {
+    private Skill currentSkill;
+    private IList<Skill> skills = Skills.AllParents();
+    private bool showSkill;
+    private bool showSkills { get; set; } = false;
+    private void toggleSkills(Skill skill) => skill.ShowSkills = !skill.ShowSkills;
+
+    private void openSkill(Skill skill)
+    {
+        currentSkill = skill;
+        showSkill = true;
+    }
+}

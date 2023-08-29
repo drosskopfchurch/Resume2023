@@ -1,3 +1,6 @@
 {
-    "dotnet.defaultSolution": "Resume2023.sln"
+    "dotnet.defaultSolution": "Resume2023.sln",
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net7.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/766a0c99-d7e5-4769-8efb-7d374cbc6309/resourceGroups/Rosskopf/providers/Microsoft.Web/sites/Rosskopf"
 }
